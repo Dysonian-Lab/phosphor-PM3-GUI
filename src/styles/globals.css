@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* Matrix Terminal -- full palette */
+:root {
+  /* Backgrounds */
+  --bg-void: #000000;
+  --bg-panel: #0A0A0A;
+  --bg-surface: #111111;
+  --bg-highlight: #1A1A1A;
+
+  /* Greens */
+  --green-bright: #00FF41;
+  --green-mid: #00CC33;
+  --green-dim: #00801A;
+  --green-ghost: #003300;
+
+  /* Reds */
+  --red-bright: #FF0033;
+  --red-dim: #660015;
+
+  /* Amber */
+  --amber: #FFB800;
+  --amber-dim: #664A00;
+
+  /* Semantic aliases */
+  --text-primary: var(--green-bright);
+  --text-secondary: var(--green-mid);
+  --text-dim: var(--green-dim);
+  --text-ghost: var(--green-ghost);
+
+  --border-primary: var(--green-bright);
+  --border-dim: var(--green-dim);
+
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: auto;
+}
+
+/* No rounded corners anywhere */
+* {
+  border-radius: 0 !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-dim);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Selection */
+::selection {
+  background: var(--green-bright);
+  color: var(--bg-void);
+}
